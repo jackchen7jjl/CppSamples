@@ -64,3 +64,15 @@ SETUP_SAMPLE_START(ValgrindUseSample)
 		ValgrindUseSample/ValgrindUseSample.cpp
 	)
 SETUP_SAMPLE_END(ValgrindUseSample)
+
+SETUP_SAMPLE_START(PragmaOnceSample)
+	SET(SOURCE_FILES
+		PragmaOnceSample/PragmaOnceSample.cpp
+		PragmaOnceSample/Common.cpp
+		PragmaOnceSample/Student.cpp
+	)
+	SET(HEADER_FILES
+		PragmaOnceSample/Common.h
+		PragmaOnceSample/Student.h
+	)
+SETUP_SAMPLE_END(PragmaOnceSample)
