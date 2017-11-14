@@ -76,3 +76,9 @@ SETUP_SAMPLE_START(PragmaOnceSample)
 		PragmaOnceSample/Student.h
 	)
 SETUP_SAMPLE_END(PragmaOnceSample)
+
+SETUP_SAMPLE_START(DestructorSample)
+	SET(SOURCE_FILES
+		DestructorSample/DestructorSample.cpp
+	)
+SETUP_SAMPLE_END(DestructorSample)
