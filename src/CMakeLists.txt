@@ -82,3 +82,16 @@ SETUP_SAMPLE_START(DestructorSample)
 		DestructorSample/DestructorSample.cpp
 	)
 SETUP_SAMPLE_END(DestructorSample)
+
+SETUP_SAMPLE_START(StlSample)
+	SET(SOURCE_FILES
+		StlSample/StlSample.cpp
+	)
+SETUP_SAMPLE_END(StlSample)
+
+SETUP_SAMPLE_START(StringSample)
+	SET(SOURCE_FILES
+		StringSample/StringSample.cpp
+	)
+SETUP_SAMPLE_END(StringSample)
+
