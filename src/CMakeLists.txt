@@ -95,3 +95,8 @@ SETUP_SAMPLE_START(StringSample)
 	)
 SETUP_SAMPLE_END(StringSample)
 
+SETUP_SAMPLE_START(CastSample)
+	SET(SOURCE_FILES
+		CastSample/CastSample.cpp
+	)
+SETUP_SAMPLE_END(CastSample)

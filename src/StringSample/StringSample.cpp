@@ -4,11 +4,19 @@
 
 using namespace std;
 
+void toupperCase(string url)
+{
+	transform(url.begin(), url.end(), url.begin(), ::toupper);
+	cout << url << endl;
+}
+
 int main()
 {	
 	string url0 = "Test/Grass.Bmp";
-	string url = url0;
+	toupperCase(url0);
+	cout << url0 << endl;
 
+	string url = url0;
 	cout << url << endl;
 
 	transform(url.begin(), url.end(), url.begin(), ::toupper);
