@@ -11,7 +11,7 @@ HANDLE ghSemaphore;
 
 DWORD WINAPI ThreadProc(LPVOID);
 
-int main2(void)
+int main(void)
 {
 	HANDLE aThread[THREADCOUNT];
 	DWORD ThreadID;

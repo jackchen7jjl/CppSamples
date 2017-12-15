@@ -13,9 +13,17 @@ void toupperCase(string url)
 int main()
 {	
 	string url0 = "Test/Grass.Bmp";
+	size_t index = 0;
+
+	//----------------find_last_of -----------------
+	index = url0.find_last_of("Bmp");
+	cout << "find_last_of " << index << endl;
+
+
+	//----------------transform------------------------
 	toupperCase(url0);
 	cout << url0 << endl;
-
+	
 	string url = url0;
 	cout << url << endl;
 
@@ -27,13 +35,15 @@ int main()
 
 	string bmpExtension = ".bmp0";
 
-	size_t index = url.find(bmpExtension);
+	//----------find---------------------------------
+	index = url.find(bmpExtension);
 	cout << index << endl;
 
 	if (index != url.npos)
 	{
 		cout << "Found!" << endl;
 	}
+
 
 	std::cin.get();
 	std::cin.get();

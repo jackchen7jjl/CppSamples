@@ -100,3 +100,23 @@ SETUP_SAMPLE_START(CastSample)
 		CastSample/CastSample.cpp
 	)
 SETUP_SAMPLE_END(CastSample)
+
+SETUP_SAMPLE_START(MultiInheritSample)
+	SET(SOURCE_FILES
+		MultiInheritSample/MultiInheritSample.cpp
+	)
+SETUP_SAMPLE_END(MultiInheritSample)
+
+SETUP_SAMPLE_START(StackSample)
+	SET(SOURCE_FILES
+		StackSample/StackSample.cpp
+	)
+SETUP_SAMPLE_END(StackSample)
+
+SETUP_SAMPLE_START(VectorBytesTest)
+	SET(SOURCE_FILES
+		VectorBytesTest/VectorBytesTest.cpp
+		VectorBytesTest/FastByteArray.h
+		VectorBytesTest/FastByteArray.cpp
+	)
+SETUP_SAMPLE_END(VectorBytesTest)

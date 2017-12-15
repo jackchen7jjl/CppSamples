@@ -39,7 +39,7 @@ void attempt_10k_increases(int index)
 	}
 }
 
-int main(int argc, const char* argv[]) {
+int main2(int argc, const char* argv[]) {
 	std::thread threads[10];
 	for (int i = 0; i<10; ++i)
 		threads[i] = std::thread(attempt_10k_increases,i);

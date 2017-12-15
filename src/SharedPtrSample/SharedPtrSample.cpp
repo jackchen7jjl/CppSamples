@@ -18,9 +18,9 @@ int main()
 		//foo("t2",s);
 
 		Student *sp = new Student("jack2",2);
-		StudentSP s2(sp);
-		foo("t3", s2);
-		foo("t4", s2);
+		std::shared_ptr<Student> ssp = std::shared_ptr<Student>(sp);
+		//foo("t3", s2);
+		//foo("t4", s2);
 	}
 
 	cin.get();
