@@ -12,33 +12,37 @@ int main()
 	std::vector<uint> vcs(numCnts);
 
 	long long sum = 0;
+	uint pos = 0;
 
 	clock_t clc0 = clock();
 	for (int i = 0; i < numCnts; i++)
 	{
-		fb.si32(i,i*4);
+		fb.si32(i, pos); pos += 4;
 	}	
 
-	fb.SetPosition(0);
+	pos = 0;
 
 	for (int i = 0; i < numCnts; i++)
 	{
-		sum += fb.li32(i * 4);
+		sum += fb.li32(pos); pos += 4;
 	}
 
 	clock_t clc1 = clock();
 	std::cout << "FastByteArray:  " << (clc1 - clc0) << ", " << sum << std::endl;
 	sum = 0;
+	pos = 0;
 
 	clc0 = clock();
 	for (int i = 0; i < numCnts; i++)
 	{
-		vcs[i] = i;
+		vcs[pos] = i; pos++;
 	}
+	
+	pos = 0;
 
 	for (int i = 0; i < numCnts; i++)
 	{
-		sum += vcs[i];
+		sum += vcs[pos]; pos++;
 	}
 
 	clc1 = clock();

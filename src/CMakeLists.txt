@@ -120,3 +120,16 @@ SETUP_SAMPLE_START(VectorBytesTest)
 		VectorBytesTest/FastByteArray.cpp
 	)
 SETUP_SAMPLE_END(VectorBytesTest)
+
+SETUP_SAMPLE_START(OpaqueSample)
+	SET(SOURCE_FILES
+		OpaqueSample/OpaqueSample.cpp
+	)
+SETUP_SAMPLE_END(OpaqueSample)
+
+SETUP_SAMPLE_START(ArgSample)
+	SET(SOURCE_FILES
+		ArgSample/ArgSample.cpp
+	)
+SETUP_SAMPLE_END(ArgSample)
+
