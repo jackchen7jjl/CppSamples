@@ -133,3 +133,18 @@ SETUP_SAMPLE_START(ArgSample)
 	)
 SETUP_SAMPLE_END(ArgSample)
 
+SETUP_SAMPLE_START(SocketServer)
+	SET(SOURCE_FILES
+		SocketServer/SocketServer.cpp
+		SocketServer/CClient.cpp
+		SocketServer/CClient.h
+	)
+SETUP_SAMPLE_END(SocketServer)
+
+SETUP_SAMPLE_START(SocketClient)
+	SET(SOURCE_FILES
+		SocketClient/SocketClient.cpp
+		SocketClient/WinSocketClient.cpp
+		SocketClient/WinSocketClient.h
+	)
+SETUP_SAMPLE_END(SocketClient)
