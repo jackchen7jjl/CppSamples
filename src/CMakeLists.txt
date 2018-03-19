@@ -148,3 +148,18 @@ SETUP_SAMPLE_START(SocketClient)
 		SocketClient/WinSocketClient.h
 	)
 SETUP_SAMPLE_END(SocketClient)
+
+SETUP_SAMPLE_START(WinHttpSample)
+	SET(SOURCE_FILES
+		WinHttpSample/WinHttpSample.cpp
+		WinHttpSample/HttpClientSyn.cpp
+		WinHttpSample/HttpClientSyn.h
+		WinHttpSample/HttpTransByGet.cpp
+		WinHttpSample/HttpTransByGet.h
+		WinHttpSample/HttpTransByPost.cpp
+		WinHttpSample/HttpTransByPost.h
+		WinHttpSample/jsoncpp.cpp
+		WinHttpSample/json.h
+		WinHttpSample/json-forwards.h
+	)
+SETUP_SAMPLE_END(WinHttpSample)
