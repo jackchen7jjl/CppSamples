@@ -50,7 +50,7 @@ bool WinSocketClient::Connect(std::string serverIP, WORD serverPort)
 
 void WinSocketClient::Send(std::string msg)
 {
-	
+	Send((unsigned char *)msg.c_str(), msg.length());
 }
 
 void WinSocketClient::Send(unsigned char *data, int dataLen)
@@ -83,5 +83,27 @@ void WinSocketClient::Send(unsigned char *data, int dataLen)
 
 void WinSocketClient::TryReceiveData()
 {
+	char *recvBuff = new char[10240];
+	int ret = recv(_clientSocket, recvBuff, 1024, 0);
+	if (ret == SOCKET_ERROR)
+	{
+		int r = WSAGetLastError();
+		if (r == WSAEWOULDBLOCK)
+		{
+			//std::cout<<"没有收到服务器返回的数据！！"<<std::endl;  
+			//Sleep(10);
+			return;
+		}
+		else if (r == WSAENETDOWN)
+		{
+			std::cout << "数据接收失败！" << std::endl;
+			return;
+		}
+	}
+	else
+	{
+		std::cout << "接收成功！" << std::endl;
 
+		std::cout << recvBuff << std::endl;
+	}
 }

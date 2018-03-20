@@ -193,7 +193,7 @@ bool InitSocket()
 	addr.sin_addr.S_un.S_addr = INADDR_ANY;
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(8888);
-	addr.sin_addr.S_un.S_addr = inet_addr("168.168.127.21");// INADDR_ANY;
+	addr.sin_addr.S_un.S_addr = inet_addr("192.168.1.103");// INADDR_ANY;
 
 	r = bind(servSocket, (sockaddr*)&addr, sizeof(addr));
 	if (r == SOCKET_ERROR)
